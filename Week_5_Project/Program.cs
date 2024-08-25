@@ -61,7 +61,7 @@ namespace Weak_5_Project
                         car.DoorCount = Convert.ToInt32(Console.ReadLine());
 
                     }
-                    catch
+                    catch(FormatException ex)
                     {
                         Console.WriteLine("Lütfen sayısal değer girin");
                         goto Car;
