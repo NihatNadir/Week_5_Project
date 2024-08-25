@@ -8,6 +8,17 @@
  - Oluşturulan araba nesnesini arabalar isimli bir listeye aktarıyoruz.
  - Kullanıcıya başka araba oluşturmak isteyip istemediğini sorunuz, evet ise yeni bir araba üretip listeye ekleniyor. Cevap hayır ise arabalar listesinin bütün elemanlarının bilgileri yazdırılıyor.
 
+### Kullanılan yöntem,blok ve metotlar 
+- List<Car>: Car nesnelerinin saklandığı dinamik bir listedir. Bu listeye program boyunca birden fazla Car nesnesi eklenebilir.
+- string.ToLower(): Girilen metni küçük harflere dönüştürerek büyük-küçük harf duyarlılığını ortadan kaldırır.
+- try-catch Bloğu: Potansiyel bir hatayı (exception) yakalamak ve yönetmek için kullanılır. Burada, kapı sayısı için sayısal bir değer girilmezse, hata yakalanır ve kullanıcı tekrar giriş yapmaya yönlendirilir.
+- goto: Programın belirli bir noktasına gitmek için kullanılır. Bu kodda, kullanıcı hatalı giriş yaptığında belirli bir noktaya geri döndürmek için kullanılmıştır.
+- foreach: Koleksiyonlar veya diziler üzerinde yineleme yapmak için kullanılır. Burada, cars listesi içinde bulunan her Car nesnesinin bilgilerini ekrana yazdırmak için kullanılmıştır.
+- isValid: Programın ana döngüsünün çalışmaya devam edip etmeyeceğini kontrol eden bir bayrak (flag) değişkenidir. true olduğu sürece döngü devam eder, false olduğunda döngü sonlanır ve program çıkar.
+- null-coalescing Operatörü (??): Bir değer null ise, belirli bir varsayılan değeri döndürmek için kullanılır. Örneğin, Console.ReadLine() ?? "" ifadesi, Console.ReadLine() null döndürürse boş bir string döndürür.
+- car.InfoCar Yöntemi : Car sınıfı içinde tanımlanmış olmalıdır ve bir Car nesnesinin tüm özelliklerini (üretim tarihi, seri numarası, marka, model, renk, kapı sayısı) ekrana yazdırır.
+- break Deyimi : Döngüden çıkmak için kullanılır. Kullanıcı 'h' tuşuna bastığında foreach döngüsü tamamlandıktan sonra break ile programdan çıkılır.
+
    ---
 
 ## Program Flow:
@@ -17,3 +28,17 @@
 - If a non-numeric value is assigned to the Door Count, the program prevents an exception from being thrown, displays a warning message, and redirects the user back to that input line.
 - The created car object is added to a list named cars.
 - The program asks the user if they want to create another car; if 'yes', a new car is created and added to the list. If the answer is 'no', the information of all elements in the cars list is printed.
+
+### Methods, Blocks, and Constructs Used
+- List<Car>: A dynamic list that stores Car objects. Multiple Car objects can be added to this list throughout the program.
+- string.ToLower(): Converts the input text to lowercase, eliminating case sensitivity.
+- try-catch Block: Used to catch and handle potential errors (exceptions). Here, it is used to catch an error if a non-numeric value is entered for the door count, prompting the user to re-enter the value.
+- goto: Directs the program flow to a specific point. In this code, it is used to return to a specific point if the user makes an incorrect input.
+- foreach: Used to iterate over collections or arrays. In this case, it is used to print the information of each Car object in the cars list to the console.
+- isValid: A flag variable that controls whether the main loop of the program continues to run. The loop continues as long as it is true, and the program exits when it is false.
+- null-coalescing Operator (??): Returns a default value if the input is null. For example, Console.ReadLine() ?? "" returns an empty string if Console.ReadLine() returns null.
+- car.InfoCar Method: Should be defined within the Car class and is responsible for printing all the properties of a Car object (production date, serial number, brand, model, color, door count) to the console.
+- break Statement: Used to exit a loop. When the user presses 'h', the program exits after the foreach loop completes by using break.
+
+
+
